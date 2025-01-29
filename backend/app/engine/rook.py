@@ -4,7 +4,7 @@ from typing import List, Tuple, Optional
 
 class Rook(Piece):
     def __init__(self, color:str, position: Tuple[int, int]):
-        super.__init__(color, position)
+        super().__init__(color, position)
     
     def get_possible_moves(self, board: List[List[Optional[Piece]]]) -> List[Move]:
         """
@@ -53,6 +53,6 @@ class Rook(Piece):
                 
                 # Move to next square in the current direction if no piece was ran into
                 current_row += row_dir
-                current_col += row_dir
+                current_col += col_dir
                     
         return possible_moves

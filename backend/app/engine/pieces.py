@@ -4,7 +4,7 @@ from abc import ABC, abstractmethod
 from typing import List, Tuple, Optional
 
 class Piece(ABC):
-    def __init__(self, color: str, position: Tuple[int][int]):
+    def __init__(self, color: str, position: Tuple[int, int]):
         """
         Initialize a chess piece
         Args:
@@ -48,4 +48,5 @@ class Piece(ABC):
         String representation of the piece (useful for debugging)
         """
         return f"{self.color} {self.__class__.__name__} at {self.position}"
+    
     
